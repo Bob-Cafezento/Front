@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/cabecalho/LoginView.vue'
-import AjudaView from '../views/cabecalho/AjudaView.vue'
-import ContaView from '../views/cabecalho/ContaView.vue'
-import CadastroView from '../views/cabecalho/CadastroView.vue'
+import LoginView from '../views/LoginView.vue'
+import AjudaView from '../views/AjudaView.vue'
+import ContaView from '../views/ContaView.vue'
+import CadastroView from '../views/CadastroView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,22 +36,22 @@ const router = createRouter({
     {
       path: '/historia',
       name: 'historia',
-      component: () => import('../views/Hist/HistoriaView.vue')
+      component: () => import('../views/HistoriaView.vue')
     },
     {
       path: '/antiguidade',
       name: 'antiguidade',
-      component: () => import('../views/Hist/HistoriaView.vue')
+      component: () => import('../views/HistoriaView.vue')
     },
     {
       path: '/geografia',
       name: 'geografia',
-      component: () => import('../views/Geo/GeografiaView.vue')
+      component: () => import('../views/GeografiaView.vue')
     },
     {
       path: '/problemas-ambientais',
       name: 'problemas-ambientais',
-      component: () => import('../views/Geo/Problemas-ambientaisView.vue')
+      component: () => import('../views/Problemas-ambientaisView.vue')
     },
     {
       path: '/matematica',
@@ -59,17 +59,17 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Mate/MatematicaView.vue')
+      component: () => import('../views/MatematicaView.vue')
     },
     {
       path: '/adicao',
       name: 'adicao',
-      component: () => import('../views/Mate/AdicaoView.vue')
+      component: () => import('../views/AdicaoView.vue')
     },
     {
       path: '/subtracao',
       name: 'subtracao',
-      component: () => import('../views/Mate/SubtracaoView.vue')
+      component: () => import('../views/SubtracaoView.vue')
     },
   ]
 })

@@ -5,8 +5,16 @@
   padding: 0;
   margin: 0;
 }
+:root{
+  --verde-escuro: #3B6863;
+  --verde-claro: #7EB3A9;
+  --branco-esverdeado: #9DB4B1;
+  --cinza: #9E9E9E;
+  --preto-escuro: #0F1114;
+  --preto-claro: #282828;
+}
 body{
-  background-color: #7EB3A9;
+  background-color: var(--verde-claro);
   background-attachment: fixed;
   font-family: garamond;
   font-size: 40px;
@@ -15,23 +23,23 @@ body{
 header{
   position: sticky;
   top: 0;
-  background-color: #3B6863;
+  background-color: var(--verde-escuro);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 1%;
   font-size: 70%;
-  box-shadow: 0 2px 20px #282828;
+  box-shadow: 0 2px 20px var(--preto-claro);
 }
 .header-item{
   text-align: center;
   padding:0;
 }
-header a{ color: #9E9E9E; padding: 0%;
+header a{ color: var(--cinza); padding: 0%;
 }
 a{
   text-decoration: none;
-  color: #0F1114;
+  color: var(--preto-escuro);
 }
 a#header{
   width:8.5%
@@ -40,7 +48,7 @@ img {
   z-index: 2;
 }
 .progress{
-  background-color: #9DB4B1;
+  background-color: var(--branco-esverdeado);
   color: #0F1114;
   padding: 1% 2% 1% 2%;
   border-radius: 40px;
@@ -170,6 +178,15 @@ h1#login{
 }
 #slider img.selected {
   opacity: 1;
+}
+/*Aqui nós teremos a área da pagina conta*/
+
+main#conta{
+  font-size: small;
+}
+box-conta :hover{
+  box-shadow: 0 5px 20px var(--preto-claro);
+  cursor: pointer;
 }
 
 /*Aqui nós temos uma folha de estilo secundária que garante a responsividade do site em celulares*/

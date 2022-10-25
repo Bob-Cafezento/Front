@@ -31,7 +31,6 @@
 
 <style scoped>
 .box img {
-    width: 60%;
-    max-height: 200px;
+    height: 200px;
 }
 </style>
