@@ -86,6 +86,7 @@
   
   .form {
     padding: 20px;
+    width: 100%;
   }
   
   .form-control {

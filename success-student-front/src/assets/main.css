@@ -101,6 +101,7 @@ main{
   box-shadow: 0 0 30px #7EB3A9;
   cursor: pointer;
 }
+
 .resumo {
   display:flex;
   justify-content: center;
@@ -287,4 +288,5 @@ h3{
 main#conta{
   display: flex;
   flex-direction: row;
+  background-color: var(--verde-escuro);
 }
