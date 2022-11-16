@@ -1,6 +1,5 @@
 <template>
   <div class="body">
-
     <div class="container">
       <div class="header">
       <h2>Entre novamente no Success Student</h2>
@@ -33,9 +32,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif
-  
-    
+  font-family: Arial, Helvetica, sans-serif;
   }
   
   .body {
@@ -117,7 +114,7 @@
   }
   
   
-  /* Error and Success */
+  /* Erros e Sucesso */
   .form-control.success input {
     border-color: #2ecc71;
   }

@@ -1,5 +1,5 @@
-
 <template>
+  <div class="body">
     <div class="container">
         <div class="header">
             <h2>Crie uma conta no Success Student</h2>
@@ -41,6 +41,7 @@
         </form>
      
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -133,7 +134,7 @@
   }
   
   
-  /* Error and Success */
+  /* Erros e sucesso */
   .form-control.success input {
     border-color: #2ecc71;
   }

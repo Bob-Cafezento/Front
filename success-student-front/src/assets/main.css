@@ -253,6 +253,8 @@ box-conta :hover{
       min-width: 70%;
       box-shadow: -2px 2px 5px black;
   }
+
+
 }
 label{
   font-size: 20px;
@@ -279,4 +281,10 @@ h3{
   font-size: 30px;
   font-weight: bolder;
   font-style: italic;
+}
+
+
+main#conta{
+  display: flex;
+  flex-direction: row;
 }
