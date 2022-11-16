@@ -101,7 +101,6 @@ main{
   box-shadow: 0 0 30px #7EB3A9;
   cursor: pointer;
 }
-
 .resumo {
   display:flex;
   justify-content: center;
@@ -254,8 +253,6 @@ box-conta :hover{
       min-width: 70%;
       box-shadow: -2px 2px 5px black;
   }
-
-
 }
 label{
   font-size: 20px;
@@ -283,10 +280,7 @@ h3{
   font-weight: bolder;
   font-style: italic;
 }
-
-
 main#conta{
-  display: flex;
+  display:flex;
   flex-direction: row;
-  background-color: var(--verde-escuro);
 }

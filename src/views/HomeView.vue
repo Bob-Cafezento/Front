@@ -10,11 +10,11 @@
     <div id="abrangent">
         <main>
             <div class="box" @click="$router.push('/linguagens')">
-                <img src="@/assets/imagens/Linguagens.png"><br>
+                <img src="@/assets/imagens/Linguagens.png">
                 Português
             </div>
             <div class="box" @click="$router.push('/matematica')">
-                <img src="@/assets/imagens/Esquadro.png"><br>
+                <img src="@/assets/imagens/Esquadro.png">
                 Matemática
             </div>
             <div class="box" @click="$router.push('/historia')">   
@@ -22,7 +22,7 @@
                 História
             </div>
             <div class="box" @click="$router.push('/geografia')">
-                <img src="@/assets/imagens/geografia.png"><br>
+                <img src="@/assets/imagens/geografia.png" >
                 Geografia
             </div>
         </main>
@@ -30,7 +30,6 @@
 </template>
 
 <style scoped>
-
 .box img {
     height: 200px;
 }

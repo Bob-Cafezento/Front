@@ -1,47 +1,31 @@
 <template>
   <div class="body">
+
     <div class="container">
-        <div class="header">
-            <h2>Crie uma conta no Success Student</h2>
-        </div>
-    
-        <form id="form" class="form">
-            <div class="form-control">
-                <label for="username">Nome de usuário </label>
-                <input type="text" id="username" placeholder="Digite seu nome"/>
-                <i class="fas fa-exclamation-circle"></i>
-                <i class="fas fa-check-circle"></i>
-                <small></small>
-            </div>
-
-            <div class="form-control">
-                <label for="email">E-mail</label>
-                <input type="text" id="email" placeholder="Digite seu E-mail"/>
-                <i class="fas fa-exclamation-circle"></i>
-                <i class="fas fa-check-circle"></i>
-                <small></small>
-            </div>
-
-            <div class="form-control">
-                <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Digite sua senha"/>
-                <i class="fas fa-exclamation-circle"></i>
-                <i class="fas fa-check-circle"></i>
-                <small></small>
-            </div>
-
-            <div class="form-control">
-                <label for="password-confirmation">Confirmação de senha</label>
-                <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..."/>
-                <i class="fas fa-exclamation-circle"></i>
-                <i class="fa fa-check-circle"></i>
-                <small></small>
-            </div>
-            <button type="submit" class="botao">Enviar</button>
-        </form>
-     
+      <div class="header">
+      <h2>Entre novamente no Success Student</h2>
     </div>
+    
+    <form id="form" class="form">
+      <div class="form-control">
+        <label for="email">E-mail</label>
+        <input type="text" id="email" placeholder="Digite seu E-mail" />
+        <i class="fas fa-exclamation-circle"></i>
+        <i class="fas fa-check-circle"></i>
+        <small></small>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" />
+        <i class="fas fa-exclamation-circle"></i>
+        <i class="fas fa-check-circle"></i>
+        <small></small>
+      </div>
+      <button type="submit" class="botao">Enviar</button>
+    </form>
   </div>
+</div>
 </template>
 
 <style scoped>
@@ -50,6 +34,8 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif
+  
+    
   }
   
   .body {
@@ -72,9 +58,6 @@
     width: 400px;
     max-width: 100%;
     overflow: hidden;
-    
-    display:flex;
-    align-items: center;
   }
   
   .header {
@@ -86,7 +69,6 @@
   
   .form {
     padding: 20px;
-    width: 100%;
   }
   
   .form-control {
@@ -135,7 +117,7 @@
   }
   
   
-  /* Erros e sucesso */
+  /* Error and Success */
   .form-control.success input {
     border-color: #2ecc71;
   }
