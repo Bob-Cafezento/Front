@@ -1,5 +1,5 @@
-
 <template>
+  <div class="body">
     <div class="container">
         <div class="header">
             <h2>Crie uma conta no Success Student</h2>
@@ -30,17 +30,11 @@
                 <small></small>
             </div>
 
-            <div class="form-control">
-                <label for="password-confirmation">Confirmação de senha</label>
-                <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..."/>
-                <i class="fas fa-exclamation-circle"></i>
-                <i class="fa fa-check-circle"></i>
-                <small></small>
-            </div>
             <button type="submit" class="botao">Enviar</button>
         </form>
      
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -71,9 +65,6 @@
     width: 400px;
     max-width: 100%;
     overflow: hidden;
-    
-    display:flex;
-    align-items: center;
   }
   
   .header {
@@ -88,14 +79,12 @@
   }
   
   .form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: relative;
   }
   
   .form-control label {
     display: inline-block;
-    margin-bottom: 5px;
   }
   
   .form-control input {

@@ -57,7 +57,6 @@
   .big-box-conta img{
     z-index: inherit;
   }
-  
   .box{
     background-color: var(--verde-claro);
     font-size: 35px;
@@ -67,19 +66,17 @@
     margin: 0%;
     width: 100%;
     box-shadow: none;
-    
   }
-
   .big-box-conta{
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-size: 70px;
-      
+      padding-bottom: 30px;
   }
   .big-box{
-      width: 30%;
+      width: 35%;
       margin: 1%;
       display: flex;
       flex-flow: column;
@@ -113,7 +110,6 @@
     margin-top: 20px;
     cursor: pointer;
   }
-
   h2{
     font-size: 40px;
   }
