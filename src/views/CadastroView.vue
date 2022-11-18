@@ -1,9 +1,19 @@
 <script>
-  import Axios from "axios"
+  import axios from "axios"
   export default {
     data() {
       return {
         usuario: {}
+      }
+    },
+    methods: {
+      async criarUsuario(){
+        try {
+          await axios.post("http://localhost:8000/api/usuario/", this.usuario)
+          alert("Usuario criado com sucesso")
+        } catch(e) {
+          alert("Algum erro")
+        }
       }
     }
   }
@@ -16,10 +26,26 @@
             <h2>Crie uma conta no Success Student</h2>
         </div>
     
-        <form id="form" class="form">
+        <form id="form" class="form" @submit.prevent="criarUsuario">
             <div class="form-control">
-                <label for="username">Nome de usuário </label>
-                <input type="text" id="username" placeholder="Digite seu nome"/>
+                <label for="username">Nome da conta</label>
+                <input type="text" v-model="usuario.username" id="username" placeholder="Digite seu username"/>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="username">Nome </label>
+                <input type="text" v-model="usuario.first_name" id="username" placeholder="Digite seu nome"/>
+                <i class="fas fa-exclamation-circle"></i>
+                <i class="fas fa-check-circle"></i>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="username">Sobrenome</label>
+                <input type="text" v-model="usuario.last_name" id="username" placeholder="Digite seu sobrenome"/>
                 <i class="fas fa-exclamation-circle"></i>
                 <i class="fas fa-check-circle"></i>
                 <small></small>
@@ -27,7 +53,7 @@
 
             <div class="form-control">
                 <label for="email">E-mail</label>
-                <input type="text" id="email" placeholder="Digite seu E-mail"/>
+                <input type="text" v-model="usuario.email" id="email" placeholder="Digite seu E-mail"/>
                 <i class="fas fa-exclamation-circle"></i>
                 <i class="fas fa-check-circle"></i>
                 <small></small>
@@ -35,7 +61,7 @@
 
             <div class="form-control">
                 <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Digite sua senha"/>
+                <input type="password" v-model="usuario.password" id="password" placeholder="Digite sua senha"/>
                 <i class="fas fa-exclamation-circle"></i>
                 <i class="fas fa-check-circle"></i>
                 <small></small>

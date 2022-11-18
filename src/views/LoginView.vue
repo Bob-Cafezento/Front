@@ -1,3 +1,27 @@
+<script>
+import axios from "axios"
+
+export default {
+  data() {
+    return {
+      usuario: {}
+    }  
+  },
+  methods: {
+    async logarUsuario() {
+      try {
+        await axios.post("http://localhost:8000/token/", this.usuario)
+        alert("Usuario logado com sucesso")
+      } catch(e) {
+        alert("algum erro")
+      }
+    }
+  }
+}
+
+</script>
+
+
 <template>
   <div class="body">
 
@@ -6,10 +30,10 @@
       <h2>Entre novamente no Success Student</h2>
     </div>
     
-    <form id="form" class="form">
+    <form id="form" class="form" @submit.prevent="logarUsuario">
       <div class="form-control">
-        <label for="email">E-mail</label>
-        <input type="text" id="email" placeholder="Digite seu E-mail" />
+        <label for="email">Username</label>
+        <input type="text" v-model="usuario.username" id="username" placeholder="Digite seu username" />
         <i class="fas fa-exclamation-circle"></i>
         <i class="fas fa-check-circle"></i>
         <small></small>
@@ -17,7 +41,7 @@
 
       <div class="form-control">
         <label for="password">Senha</label>
-        <input type="password" id="password" placeholder="Digite sua senha" />
+        <input type="password" v-model="usuario.password" id="password" placeholder="Digite sua senha" />
         <i class="fas fa-exclamation-circle"></i>
         <i class="fas fa-check-circle"></i>
         <small></small>
