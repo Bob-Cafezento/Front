@@ -1,3 +1,14 @@
+<script>
+  import Axios from "axios"
+  export default {
+    data() {
+      return {
+        usuario: {}
+      }
+    }
+  }
+</script>
+
 <template>
   <div class="body">
     <div class="container">
