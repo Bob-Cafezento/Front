@@ -4,13 +4,13 @@ import axios from "axios";
 export default {
   data() {
     return {
-      usuario: {},
+      auth: {},
     };
   },
   methods: {
     async logarUsuario() {
       try {
-        await axios.post("http://localhost:8000/token/", this.usuario);
+        await axios.post("http://localhost:8000/auth/login/", this.auth);
         alert("Usuario logado com sucesso");
       } catch (e) {
         alert("algum erro");
@@ -32,9 +32,22 @@ export default {
           <label for="email">Username</label>
           <input
             type="text"
-            v-model="usuario.username"
+            v-model="auth.username"
             id="username"
             placeholder="Digite seu username"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small></small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">E-mail</label>
+          <input
+            type="text"
+            v-model="auth.email"
+            id="email"
+            placeholder="Digite seu E-mail"
           />
           <i class="fas fa-exclamation-circle"></i>
           <i class="fas fa-check-circle"></i>
@@ -45,7 +58,7 @@ export default {
           <label for="password">Senha</label>
           <input
             type="password"
-            v-model="usuario.password"
+            v-model="auth.password"
             id="password"
             placeholder="Digite sua senha"
           />

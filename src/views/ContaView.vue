@@ -1,6 +1,28 @@
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      auth: {},
+    };
+  },
+  methods: {
+    async AlterarSenha() {
+      try {
+        await axios.post("http://localhost:8000/auth/password/change/", this.auth);
+        alert("Usuario deletado com sucesso");
+      } catch (e) {
+        alert("algum erro");
+      }
+    },
+  },
+};
+</script>
+
 <template>
   <div id="abrangent">
-    <main id="conta">
+    <main id="conta" @submit.prevent="criarUsuario">
       <div class="big-box-conta">
         <img src="@/assets/imagens/CONTA.png" width="200" />
         Tenha controle da sua conta
@@ -32,10 +54,10 @@
         <h2>Altere sua senha</h2>
         <div class="box">
           Coloque a sua senha antiga
-          <input type="password" /><br />
+          <input type="password" v-model="auth.password1"/><br />
 
           Coloque a sua senha nova
-          <input type="password" /><br />
+          <input type="password" v-model="auth.password2"/><br />
           <button type="submit" class="botao">Enviar</button>
         </div>
       </div>
@@ -43,8 +65,11 @@
       <div class="big-box">
         <h2>Apague sua conta</h2>
         <div class="box">
-          Coloque a sua senha e confirme<br />
-          <input type="password" /><br />
+          Coloque a sua senha<br/>
+          <input type="password"/>
+          Confirme a sua senha<br/>
+          <input type="password"/>
+          <br />
           <button type="submit" class="botao">Enviar</button>
         </div>
       </div>
