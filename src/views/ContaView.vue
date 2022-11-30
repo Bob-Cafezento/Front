@@ -8,10 +8,18 @@ export default {
     };
   },
   methods: {
-    async AlterarSenha() {
+    async deletarConta() {
       try {
-        await axios.post("http://localhost:8000/auth/password/change/", this.auth);
+        await axios.post("https://successstudent.pythonanywhere.com/auth/user/", { is_active: false });
         alert("Usuario deletado com sucesso");
+      } catch (e) {
+        alert("algum erro");
+      }
+    },
+    async alterarSenha() {
+      try {
+        await axios.post("https://successstudent.pythonanywhere.com/auth/password/change/", this.auth);
+        alert("Senha alterada com sucesso");
       } catch (e) {
         alert("algum erro");
       }
@@ -22,33 +30,12 @@ export default {
 
 <template>
   <div id="abrangent">
-    <main id="conta" @submit.prevent="criarUsuario">
+    <main id="conta">
       <div class="big-box-conta">
         <img src="@/assets/imagens/CONTA.png" width="200" />
         Tenha controle da sua conta
       </div>
 
-      <div class="big-box">
-        <h2>Altere seu email</h2>
-        <div class="box">
-          Coloque a sua senha
-          <input type="password" /><br />
-          Coloque seu novo email
-          <input type="email" /><br />
-          <button type="submit" class="botao">Enviar</button>
-        </div>
-      </div>
-
-      <div class="big-box">
-        <h2>Altere seu nome</h2>
-        <div class="box">
-          Coloque sua senha
-          <input type="password" /><br />
-          Coloque seu novo nome
-          <input type="text" /><br />
-          <button type="submit" class="botao">Enviar</button>
-        </div>
-      </div>
 
       <div class="big-box">
         <h2>Altere sua senha</h2>
@@ -58,19 +45,8 @@ export default {
 
           Coloque a sua senha nova
           <input type="password" v-model="auth.password2"/><br />
-          <button type="submit" class="botao">Enviar</button>
-        </div>
-      </div>
-
-      <div class="big-box">
-        <h2>Apague sua conta</h2>
-        <div class="box">
-          Coloque a sua senha<br/>
-          <input type="password"/>
-          Confirme a sua senha<br/>
-          <input type="password"/>
-          <br />
-          <button type="submit" class="botao">Enviar</button>
+          <button type="submit" class="botao" @click="alterarSenha">Enviar</button>
+          <button type="submit" class="botao" @click="deletarConta">Deletar conta</button>
         </div>
       </div>
     </main>

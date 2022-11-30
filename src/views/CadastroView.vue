@@ -9,7 +9,7 @@ export default {
   methods: {
     async criarUsuario() {
       try {
-        await axios.post("http://localhost:8000/auth/registration/", this.auth);
+        await axios.post("https://successstudent.pythonanywhere.com/auth/registration/", this.auth);
         alert("Usuario criado com sucesso");
       } catch (e) {
         alert("Algum erro");
@@ -26,7 +26,7 @@ export default {
         <h2>Crie uma conta no Success Student</h2>
       </div>
 
-      <form id="form" class="form" @submit.prevent="criarUsuario">
+      <form id="form" class="form">
         <div class="form-control">
           <label for="username">Nome da conta</label>
           <input
@@ -79,7 +79,7 @@ export default {
           <small></small>
         </div>
 
-        <button type="submit" class="botao">Enviar</button>
+        <button type="submit" class="botao" @click="criarUsuario">Enviar</button>
       </form>
     </div>
   </div>
