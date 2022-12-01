@@ -2,7 +2,6 @@
   <h1>SUCCESS STUDENT</h1>
     <div id="abrangent">
         <main>
-
             <div class="box" @click="$router.push('/adicao')">
                 <img src="@/assets/imagens/Adição.png" width="180"><br>
                 Adição

@@ -68,6 +68,9 @@ const router = createRouter({
       name: 'subtracao',
       component: () => import('../views/SubtracaoView.vue')
     },
+    {
+      
+    }
   ]
 })
 
