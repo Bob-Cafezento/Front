@@ -2,7 +2,6 @@
     <h1>
         SUCCESS STUDENT
     </h1>
-    <div id="abrangent">
         <main class="resumo">
             <h1>Vamos aprender sobre a Grécia antiga?</h1>
 
@@ -20,5 +19,5 @@
             <p><i><b>Foi lá que surgiram </b></i>a Filosofia, Retórica, a Política, a Democracia e muitas outras coisas hoje importantes</p>
         </main>
         
-    </div>
+
 </template>

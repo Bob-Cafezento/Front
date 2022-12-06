@@ -69,8 +69,15 @@ const router = createRouter({
       component: () => import('../views/SubtracaoView.vue')
     },
     {
-      
-    }
+      path: '/adicionarconteudo',
+      name: 'adicionarconteudo',
+      component: () => import('../views/AdicionarConteudoView.vue')
+    },
+    {
+      path: '/adicionarformulario',
+      name: 'adicionarformulario',
+      component: () => import('../views/AdicionarFormularioView.vue')
+    },
   ]
 })
 

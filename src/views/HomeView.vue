@@ -21,7 +21,7 @@
         <img src="@/assets/imagens/geografia.png" /><br />
         Geografia
       </div>
-      <div class="box" @click="$router.push('/')">
+      <div class="box" @click="$router.push('/adicionarconteudo')">
         <img src="@/assets/imagens/Adição.png" /><br />
         Adicione conteúdo
       </div>
