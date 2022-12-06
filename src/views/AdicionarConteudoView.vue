@@ -1,29 +1,31 @@
 <template>
+    <h1>SUCCESS STUDENT</h1>
     <div id="abrangent">
+        
         <main>
-
+            <h2>Adicione conteúdo</h2>
+            <h3>Nesta página escreva um novo resumo, e informe a que matéria o mesmo pertence:</h3>
             <div class="box">
-                Selecione qual será a disciplina do conteúdo que você deseja adicionar ao site:<br>
-                <select name="select">
-                        <option value="valor1" selected>Português</option>
+                <h3>Selecione qual será a disciplina do conteúdo que você deseja adicionar ao site:</h3><br>
+                <select>
+                        <option value="valor" selected></option>
+                        <option value="valor1">Português</option>
                         <option value="valor2">Matemática</option>
-                        <option value="valor3">Historia</option>
+                        <option value="valor3">História</option>
                         <option value="valor3">Geografia</option>
                     </select><br>
-                Adicione um título<br>
+                <h3>Adicione um título</h3><br>
                 <input type="text" v-model="titulo"/><br>
-                Adicione um Paragráfo<br>
-                <textarea v-model="paragrafo" wrap="hard" class="paragrafo"></textarea><br>
+                <h3>Adicione um Paragráfo</h3><br>
+                <textarea v-model="paragrafo" wrap="hard"></textarea><br>
             </div>
             <div class="box" @click="$router.push('/adicionarformulario')">
                 Deseja adicionar um formulário ao seu conteúdo?
-                
             </div>
-            
         </main>
         <main class="resumo">
-                <h1>{{ titulo }}</h1> <br>
-                <p><i><b>{{ paragrafo }}</b></i></p>
+                <h1 class="titulo">{{ titulo }}</h1> <br>
+                <h4 class="paragrafo">{{ paragrafo }}</h4>
         </main>
     </div>
 </template>
@@ -45,5 +47,59 @@ export default {
     }
     .resumo{
         white-space: pre-line;
+    }
+    .titulo{
+        font-size: 50px;
+    }
+    .paragrafo{
+        font-size: 35px;
+    }
+    h1{
+        padding: 0;
+        margin-top: 20px;
+    }
+    h3{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    h4{
+        font-family: garamond;
+        font-size: 30px;
+    }
+    select{
+        width: 400px;
+        height: 50px;
+        border: none;
+        font-family: Garamond;
+        font-size: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 20px var(--preto-claro);
+    }
+    select:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
+    }
+    input{
+        width: 400px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-family: Garamond;
+        font-size: 30px;
+        box-shadow: 0 2px 20px var(--preto-claro);
+    }
+    input:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
+    }
+    textarea{
+        width: 1000px;
+        height: 100px;
+        border-radius: 10px;
+        font-family: Garamond;
+        font-size: 30px;
+        box-shadow: 0 4px 20px var(--preto-claro);
+    }
+    textarea:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
     }
 </style>
