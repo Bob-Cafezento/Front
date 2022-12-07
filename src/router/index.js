@@ -39,19 +39,9 @@ const router = createRouter({
       component: () => import('../views/HistoriaView.vue')
     },
     {
-      path: '/antiguidade',
-      name: 'antiguidade',
-      component: () => import('../views/HistoriaView.vue')
-    },
-    {
       path: '/geografia',
       name: 'geografia',
       component: () => import('../views/GeografiaView.vue')
-    },
-    {
-      path: '/problemas-ambientais',
-      name: 'problemas-ambientais',
-      component: () => import('../views/Problemas-ambientaisView.vue')
     },
     {
       path: '/matematica',
@@ -59,14 +49,9 @@ const router = createRouter({
       component: () => import('../views/MatematicaView.vue')
     },
     {
-      path: '/adicao',
-      name: 'adicao',
-      component: () => import('../views/AdicaoView.vue')
-    },
-    {
-      path: '/subtracao',
-      name: 'subtracao',
-      component: () => import('../views/SubtracaoView.vue')
+      path: '/portugues',
+      name: 'portugues',
+      component: () => import('../views/PortuguesView.vue')
     },
     {
       path: '/adicionarconteudo',

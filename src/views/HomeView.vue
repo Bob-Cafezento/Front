@@ -5,7 +5,7 @@
   <h1>SUCCESS STUDENT</h1>
   <div id="abrangent">
     <main>
-      <div class="box" @click="$router.push('/linguagens')">
+      <div class="box" @click="$router.push('/portugues')">
         <img src="@/assets/imagens/Linguagens.png" /><br />
         Português
       </div>

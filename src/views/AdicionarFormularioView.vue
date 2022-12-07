@@ -1,4 +1,5 @@
 <template>
+    <h1>SUCCESS STUDENT</h1>
     <div id="abrangent">
         <main>
             <div class="box">
@@ -7,7 +8,7 @@
             </div>
             <div class="box">
                 Adicione a primeira pergunta<br>
-                <input type="text" v-model="formulario.pergunta1"><br>
+                <textarea type="text" v-model="formulario.pergunta1"></textarea><br>
 
                 Adicione as alternativas<br>
                 <input type="text" v-model="formulario.alternativa1"><br>
@@ -96,38 +97,41 @@
                 </select>
             </div>
         </main>
+
+    <h1> Visão Prévia do formulário</h1>
+
         <main class="resumo">
             <h1 class="titulo">{{ formulario.titulo }}</h1> <br>
             <!--Primeira pergunta-->
             {{ formulario.pergunta1 }}<br>
-            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa1 }}<br>
-            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa2 }}<br>
-            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa3 }}<br>
-            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa4 }}<br>
+            <div><input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa1 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa2 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa3 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa4 }}</div><br>
             <!--Segunda pergunta-->
             {{ formulario.pergunta2 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa5 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa6 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa7 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa8 }}<br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa5 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa6 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa7 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa8 }}</div><br>
             <!--Terceira pergunta-->
             {{ formulario.pergunta3 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa9 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa10 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa11 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa12 }}<br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa9 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa10 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa11 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa12 }}</div><br>
             <!--Quarta pergunta-->
             {{ formulario.pergunta4 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa13 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa14 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa15 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa16 }}<br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa13 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa14 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa15 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa16 }}</div><br>
             <!--Segunda pergunta-->
             {{ formulario.pergunta5 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa17 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa18 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa19 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa20 }}<br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa17 }}<br></div>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa18 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa19 }}</div><br>
+            <div><input type="radio" class="radio" name="Pergunta" value="">{{ formulario.alternativa20 }}</div><br>
         </main>
     </div>
 </template>
@@ -199,9 +203,14 @@ export default {
         border-radius: 10px;
         font-family: Garamond;
         font-size: 30px;
-        box-shadow: 0 2px 20px var(--preto-claro);
+        box-shadow: none;
     }
+
     input:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
+    }
+    .radio:hover{
+        border-radius: 100%;
         box-shadow: 0 4px 60px var(--preto-claro);
     }
 
