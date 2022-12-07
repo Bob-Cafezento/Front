@@ -21,8 +21,6 @@
     <div class="header-item">
       <RouterLink id="cabecalho" to="/ajuda">Ajuda</RouterLink>
     </div>
-
-    <div class="progress">Progresso</div>
   </header>
 
   <RouterView />

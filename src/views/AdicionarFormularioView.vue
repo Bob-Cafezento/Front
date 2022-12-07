@@ -142,14 +142,12 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       formulario: {},
     };
   },
-
 }
 </script>
 
