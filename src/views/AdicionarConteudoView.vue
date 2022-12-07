@@ -3,7 +3,7 @@
     <div id="abrangent">
         
         <main>
-            <h2>Adicione conteúdo</h2>
+            <p><h2>Adicione conteúdo</h2></p><br>
             <h3>Nesta página escreva um novo resumo, e informe a que matéria o mesmo pertence:</h3><br>
             <div class="box">
                 <h3>Selecione qual será a disciplina do conteúdo que você deseja adicionar ao site:</h3><br>
