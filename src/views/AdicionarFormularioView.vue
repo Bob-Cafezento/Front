@@ -3,16 +3,18 @@
         <main>
             <div class="box">
                 Adicione um Título para este Formulário<br>
-                <input type="text" v-model="titulo">
+                <input type="text" v-model="formulario.titulo">
             </div>
             <div class="box">
                 Adicione a primeira pergunta<br>
-                <input type="text" v-model="pergunta1"><br>
+                <input type="text" v-model="formulario.pergunta1"><br>
+
                 Adicione as alternativas<br>
-                <input type="text" v-model="alternativa11"><br>
-                <input type="text" v-model="alternativa12"><br>
-                <input type="text" v-model="alternativa13"><br>
-                <input type="text" v-model="alternativa14"><br>
+                <input type="text" v-model="formulario.alternativa1"><br>
+                <input type="text" v-model="formulario.alternativa2"><br>
+                <input type="text" v-model="formulario.alternativa3"><br>
+                <input type="text" v-model="formulario.alternativa4"><br>
+
                 Coloque qual das alternativas é a correta:<br>
                 <select name="select">
                     <option value="valor1" selected>Alternativa 1</option>
@@ -24,11 +26,13 @@
             <div class="box">
                 Adicione a segunda pergunta<br>
                 <input type="text" v-model="pergunta2"><br>
+
                 Adicione as alternativas<br>
-                <input type="text" v-model="alternativa21"><br>
-                <input type="text" v-model="alternativa22"><br>
-                <input type="text" v-model="alternativa23"><br>
-                <input type="text" v-model="alternativa24"><br>
+                <input type="text" v-model="formulario.alternativa5"><br>
+                <input type="text" v-model="formulario.alternativa6"><br>
+                <input type="text" v-model="formulario.alternativa7"><br>
+                <input type="text" v-model="formulario.alternativa8"><br>
+
                 Coloque qual das alternativas é a correta:<br><br>
                 <select name="select">
                     <option value="valor1" selected>Alternativa 1</option>
@@ -39,12 +43,14 @@
             </div>
             <div class="box">
                 Adicione a terceira pergunta<br>
-                <input type="text" v-model="pergunta3"><br>
+                <input type="text" v-model="formulario.pergunta3"><br>
+
                 Adicione as alternativas<br>
-                <input type="text" v-model="alternativa31"><br>
-                <input type="text" v-model="alternativa32"><br>
-                <input type="text" v-model="alternativa33"><br>
-                <input type="text" v-model="alternativa34"><br>
+                <input type="text" v-model="formulario.alternativa9"><br>
+                <input type="text" v-model="formulario.alternativa10"><br>
+                <input type="text" v-model="formulario.alternativa11"><br>
+                <input type="text" v-model="formulario.alternativa12"><br>
+
                 Coloque qual das alternativas é a correta:<br>
                 <select name="select">
                     <option value="valor1" selected>Alternativa 1</option>
@@ -55,12 +61,14 @@
             </div>
             <div class="box">
                 Adicione a quarta pergunta<br>
-                <input type="text" v-model="pergunta4"><br>
+                <input type="text" v-model="formulario.pergunta4"><br>
+
                 Adicione as alternativas<br>
-                <input type="text" v-model="alternativa41"><br>
-                <input type="text" v-model="alternativa42"><br>
-                <input type="text" v-model="alternativa43"><br>
-                <input type="text" v-model="alternativa44"><br>
+                <input type="text" v-model="formulario.alternativa13"><br>
+                <input type="text" v-model="formulario.alternativa14"><br>
+                <input type="text" v-model="formulario.alternativa15"><br>
+                <input type="text" v-model="formulario.alternativa16"><br>
+
                 Coloque qual das alternativas é a correta:<br>
                 <select name="select">
                     <option value="valor1" selected>Alternativa 1</option>
@@ -71,12 +79,14 @@
             </div>
             <div class="box">
                 Adicione a quinta pergunta <br>
-                <input type="text" v-model="pergunta5"><br>
+                <input type="text" v-model="formulario.pergunta5"><br>
+
                 Adicione as alternativas<br>
-                <input type="text" v-model="alternativa51"><br>
-                <input type="text" v-model="alternativa52"><br>
-                <input type="text" v-model="alternativa53"><br>
-                <input type="text" v-model="alternativa54"><br>
+                <input type="text" v-model="formulario.alternativa17"><br>
+                <input type="text" v-model="formulario.alternativa18"><br>
+                <input type="text" v-model="formulario.alternativa19"><br>
+                <input type="text" v-model="formulario.alternativa20"><br>
+
                 Coloque qual das alternativas é a correta:<br>
                 <select name="select">
                     <option value="valor1" selected>Alternativa 1</option>
@@ -87,37 +97,37 @@
             </div>
         </main>
         <main class="resumo">
-            <h1>{{ titulo }}</h1> <br>
+            <h1 class="titulo">{{ formulario.titulo }}</h1> <br>
             <!--Primeira pergunta-->
-            {{ pergunta1 }}<br>
-            <input type="radio" name="Pergunta1" value="">{{ alternativa11 }}<br>
-            <input type="radio" name="Pergunta1" value="">{{ alternativa12 }}<br>
-            <input type="radio" name="Pergunta1" value="">{{ alternativa13 }}<br>
-            <input type="radio" name="Pergunta1" value="">{{ alternativa14 }}<br>
+            {{ formulario.pergunta1 }}<br>
+            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa1 }}<br>
+            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa2 }}<br>
+            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa3 }}<br>
+            <input type="radio" class="radio" name="Pergunta1" value="">{{ formulario.alternativa4 }}<br>
             <!--Segunda pergunta-->
-            {{ pergunta2 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa21 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa22 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa23 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa24 }}<br>
+            {{ formulario.pergunta2 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa5 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa6 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa7 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa8 }}<br>
             <!--Terceira pergunta-->
-            {{ pergunta3 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa31 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa32 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa33 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa34 }}<br>
+            {{ formulario.pergunta3 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa9 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa10 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa11 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa12 }}<br>
             <!--Quarta pergunta-->
-            {{ pergunta4 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa41 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa42 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa43 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa44 }}<br>
+            {{ formulario.pergunta4 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa13 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa14 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa15 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa16 }}<br>
             <!--Segunda pergunta-->
-            {{ pergunta5 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa51 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa52 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa53 }}<br>
-            <input type="radio" name="Pergunta" value="">{{ alternativa54 }}<br>
+            {{ formulario.pergunta5 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa17 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa18 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa19 }}<br>
+            <input type="radio" name="Pergunta" value="">{{ formulario.alternativa20 }}<br>
         </main>
     </div>
 </template>
@@ -127,37 +137,7 @@
 export default {
   data() {
     return {
-      titulo: "",
-      pergunta1: "",
-      alternativa11: "",
-      alternativa12: "",
-      alternativa13: "",
-      alternativa14: "",
-      alternativacerta1: "",
-      pergunta2: "",
-      alternativa21: "",
-      alternativa22: "",
-      alternativa23: "",
-      alternativa24: "",
-      alternativacerta2: "",
-      pergunta3: "",
-      alternativa31: "",
-      alternativa32: "",
-      alternativa33: "",
-      alternativa34: "",
-      alternativacerta3: "",
-      pergunta4: "",
-      alternativa41: "",
-      alternativa42: "",
-      alternativa43: "",
-      alternativa44: "",
-      alternativacerta4: "",
-      pergunta5: "",
-      alternativa51: "",
-      alternativa52: "",
-      alternativa53: "",
-      alternativa54: "",
-      alternativacerta5: "",
+      formulario: {},
     };
   },
 
@@ -165,7 +145,75 @@ export default {
 </script>
 
 <style scoped>
-    .box {
-        width: 100%
+    .box{
+        width: 100%;
+    }
+    .resumo{
+        white-space: pre-line;
+    }
+    .titulo{
+        font-size: 50px;
+    }
+    h1{
+        padding: 0;
+        margin-top: 20px;
+    }
+    h3{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    h4{
+        font-family: garamond;
+        font-size: 30px;
+    }
+    select{
+        margin-top: 20px;
+        width: 400px;
+        height: 50px;
+        border: none;
+        font-family: Garamond;
+        font-size: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 20px var(--preto-claro);
+    }
+    select:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
+    }
+    input{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        width: 400px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        font-family: Garamond;
+        font-size: 30px;
+        box-shadow: 0 2px 20px var(--preto-claro);
+    }
+    .radio{
+        size-adjust: border;
+        width: 42px;
+        margin: 0;
+        border: none;
+        border-radius: 10px;
+        font-family: Garamond;
+        font-size: 30px;
+        box-shadow: 0 2px 20px var(--preto-claro);
+    }
+    input:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
+    }
+
+    textarea{
+        width: 1000px;
+        height: 100px;
+        border-radius: 10px;
+        font-family: Garamond;
+        font-size: 30px;
+        box-shadow: 0 4px 20px var(--preto-claro);
+    }
+    textarea:hover{
+        box-shadow: 0 4px 60px var(--preto-claro);
     }
 </style>

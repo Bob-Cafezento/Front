@@ -12,20 +12,20 @@
                         <option value="valor1">Português</option>
                         <option value="valor2">Matemática</option>
                         <option value="valor3">História</option>
-                        <option value="valor3">Geografia</option>
+                        <option value="valor4">Geografia</option>
                     </select><br>
                 <h3>Adicione um título</h3><br>
-                <input type="text" v-model="titulo"/><br>
+                <input type="text" v-model="conteudo.titulo"/><br>
                 <h3>Adicione um Paragráfo</h3><br>
-                <textarea v-model="paragrafo" wrap="hard"></textarea><br>
+                <textarea v-model="conteudo.paragrafo" wrap="hard"></textarea><br>
             </div>
             <div class="box" @click="$router.push('/adicionarformulario')">
                 Deseja adicionar um formulário ao seu conteúdo?
             </div>
         </main>
         <main class="resumo">
-                <h1 class="titulo">{{ titulo }}</h1> <br>
-                <h4 class="paragrafo">{{ paragrafo }}</h4>
+                <h1 class="titulo">{{ conteudo.titulo }}</h1> <br>
+                <h4 class="paragrafo">{{ conteudo.paragrafo }}</h4>
         </main>
     </div>
 </template>
@@ -34,8 +34,7 @@
 export default {
   data() {
     return {
-      titulo: "",
-      paragrafo: "",
+      conteudo: {},
     };
   },
 }
