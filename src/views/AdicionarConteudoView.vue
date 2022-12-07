@@ -4,7 +4,7 @@
         
         <main>
             <h2>Adicione conteúdo</h2>
-            <h3>Nesta página escreva um novo resumo, e informe a que matéria o mesmo pertence:</h3>
+            <h3>Nesta página escreva um novo resumo, e informe a que matéria o mesmo pertence:</h3><br>
             <div class="box">
                 <h3>Selecione qual será a disciplina do conteúdo que você deseja adicionar ao site:</h3><br>
                 <select>
@@ -19,10 +19,17 @@
                 <h3>Adicione um Paragráfo</h3><br>
                 <textarea v-model="conteudo.paragrafo" wrap="hard"></textarea><br>
             </div>
+
             <div class="box" @click="$router.push('/adicionarformulario')">
-                Deseja adicionar um formulário ao seu conteúdo?
+                Clique aqui para adicionar um formulário ao seu conteúdo <br>
             </div>
+
         </main>
+
+    <h1> 
+        Visão Prévia do conteúdo
+    </h1>
+
         <main class="resumo">
                 <h1 class="titulo">{{ conteudo.titulo }}</h1> <br>
                 <h4 class="paragrafo">{{ conteudo.paragrafo }}</h4>
@@ -57,24 +64,18 @@ export default {
         padding: 0;
         margin-top: 20px;
     }
-    h3{
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
-    h4{
-        font-family: garamond;
-        font-size: 30px;
-    }
     select{
         width: 400px;
         height: 50px;
         border: none;
         font-family: Garamond;
         font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 2px 20px var(--preto-claro);
-    }
+    };
     select:hover{
         box-shadow: 0 4px 60px var(--preto-claro);
     }
@@ -85,6 +86,7 @@ export default {
         border-radius: 10px;
         font-family: Garamond;
         font-size: 30px;
+        margin-bottom: 20px;
         box-shadow: 0 2px 20px var(--preto-claro);
     }
     input:hover{
