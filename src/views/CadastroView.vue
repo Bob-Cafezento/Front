@@ -9,7 +9,7 @@ export default {
   methods: {
     async criarUsuario() {
       try {
-        await axios.post("https://successstudent.pythonanywhere.com/auth/registration/", this.auth);
+        await axios.post("http://127.0.0.1:8000/auth/registration/", this.auth);
         alert("Usuario criado com sucesso");
       } catch (e) {
         alert("Algum erro");

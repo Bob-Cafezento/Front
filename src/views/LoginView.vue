@@ -11,7 +11,7 @@ export default {
     async logarUsuario() {
       console.log(this.auth)
       try {
-        await axios.post("https://successstudent.pythonanywhere.com/auth/login/", this.auth);
+        await axios.post("http://127.0.0.1:8000/auth/login/", this.auth);
         alert("Usuario logado com sucesso");
       } catch (e) {
         alert("algum erro");
